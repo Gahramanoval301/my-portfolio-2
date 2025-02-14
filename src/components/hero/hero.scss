@@ -3,7 +3,6 @@
     background-color: linear-gradient(180deg, #0c0c1d, #111132);
     overflow: hidden;
     position: relative;
-    border: 2px solid red;
 
     .wrapper {
         max-width: 1366px;
@@ -21,11 +20,40 @@
             h2 {
                 font-size: 30px;
                 color: rebeccapurple;
-                letter-spacing: 10px;
+                letter-spacing: 6px;
             }
 
-            h1 {
-                font-size: 88px;
+
+            .text-animate {
+                h1 {
+                    position: relative;
+                    width: 32.8rem;
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    color: transparent;
+                    -webkit-text-stroke: 0.7px rebeccapurple;
+                background-image: linear-gradient(white, rebeccapurple);
+                    background-repeat: no-repeat;
+                    -webkit-background-clip: text;
+                    background-position: -33rem 0;
+                    animation: homeBgText 6s linear infinite;
+                    animation-delay: 2s;
+
+                    font-size: 88px;
+                }
+
+                h1::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    border-right: 2px solid white;
+                    z-index: -1;
+                    animation: homeCursorText 6s linear infinite;
+                    animation-delay: 2s;
+                }
             }
 
             .buttons {
@@ -36,7 +64,7 @@
                     background-color: transparent;
                     color: white;
                     margin-right: 20px;
-                    cursor: pointer;
+                    cursor: pointer !important;
                     font-weight: 300;
                 }
             }
@@ -56,13 +84,49 @@
         color: #ffffff09;
         width: 50%;
         font-weight: bold;
+        z-index: -999;
+        user-select: none;
     }
 
     .imageContainer {
         height: 100%;
         position: absolute;
-        top: 0;
-        right: 0;
-        border: 2px solid green
+        bottom: -10%;
+        right: 5%;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes homeBgText {
+
+    0%,
+    10%,
+    100% {
+        background-position: -33rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+@keyframes homeCursorText {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
     }
 }
