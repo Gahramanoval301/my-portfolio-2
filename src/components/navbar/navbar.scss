@@ -11,13 +11,19 @@
         justify-content: space-between;
         // background-color: rebeccapurple;
         height: 100%;
-
+     
         span {
             font-weight: bold;
         }
 
+        .social-media{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
         .social {
             display: flex;
+            align-items: center;
             gap: 20px;
 
             img {

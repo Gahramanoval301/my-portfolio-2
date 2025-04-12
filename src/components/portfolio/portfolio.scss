@@ -39,13 +39,25 @@
             .imageContainer {
                 flex: 1;
                 height: 50%;
+                transition: all 0.5s ease-in-out;
+                overflow: hidden;
+                transform: scale(1.0);
+                border-radius: 12px;
 
                 img {
-                    // flex: 1;
                     height: 100%;
                     width: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
+                    object-position: center;
+                    transition: all 0.5s ease-in-out;
+                    transform: scale(1.0);
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
+
+
             }
 
             .textContainer {
@@ -54,21 +66,51 @@
                 flex-direction: column;
                 gap: 30px;
 
-                h2{
-                    font-size: 72px;
+                .buttons {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                }
+
+                h2 {
+                    font-size: 64px;
 
                 }
-                p{
-                    color: gray;
-                    font-size:20px;
+
+                em{
+                    font-size: 16px;
+                    color: rgb(151, 108, 28);
+                    font-weight: 600;
                 }
-                button{
+                p {
+                    color: gray;
+                    font-size: 20px;
+                }
+
+                button {
                     background-color: orange;
                     border: none;
-                    border-radius: 10px;
-                    padding: 10px;
+                    border-radius: 12px;
+                    padding: 12px 20px;
                     width: 200px;
                     cursor: pointer;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: white;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                    transition: all 0.3s ease-in-out;
+                    letter-spacing: 0.5px;
+
+                    &:hover {
+                        background-color: darkorange;
+                        transform: translateY(-3px);
+                        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+                    }
+
+                    &:active {
+                        transform: scale(0.98);
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                    }
                 }
             }
         }

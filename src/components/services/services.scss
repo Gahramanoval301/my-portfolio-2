@@ -1,3 +1,89 @@
-.services{
-    
+.skills {
+    padding:2rem;
+    min-height: auto;
+
+    &-row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 2rem;
+
+        .skills-column {
+            border: 1px solid var(--main-color--);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.365);
+            padding: 1rem 2rem 3rem 0;
+            border-radius: 3rem;
+            transition: 1s;
+
+            &:hover {
+                box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.553),
+                    0 0 30px var(--main-color--);
+            }
+
+            .title {
+                position: relative;
+                display: inline-block;
+                font-size: 2rem;
+                margin: 0 0 1rem 2rem;
+                color: var(--main-color--);
+            }
+
+            .skills-box {
+                position: relative;
+
+                .skills-content {
+                    position: relative;
+                    padding-left: 1rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+
+                    .progress {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+                        font-size: 1.3rem;
+                        padding: 0 1rem;
+                        background-color: rgba(255, 255, 255, 0.171);
+                        border-radius: 1rem;
+                        transition: 500ms;
+
+                        &:hover {
+                            transform: scale(1.1);
+
+                            i {
+                                text-shadow: 0 0 10px var(--main-color--);
+                            }
+                        }
+
+                        i {
+                            color: var(--main-color--);
+                            transition: 0.5s;
+                        }
+
+                        &.progressing {
+                            background-color: rgba(165, 42, 42, 0.5);
+
+                            i {
+                                animation: rotate 1s infinite linear;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &-row {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
 }
