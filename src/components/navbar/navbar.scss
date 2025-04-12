@@ -1,7 +1,10 @@
-.navbar{
+.navbar {
     height: 100px;
-    .wrapper{
-        max-width: 1366px;
+
+    .wrapper {
+        // background-image: white;
+        background-image: linear-gradient(rgb(65, 31, 100), transparent);
+        padding: 1rem 8rem;
         margin: auto;
         display: flex;
         align-items: center;
@@ -9,14 +12,15 @@
         // background-color: rebeccapurple;
         height: 100%;
 
-        span{
+        span {
             font-weight: bold;
         }
-        .social{
+
+        .social {
             display: flex;
             gap: 20px;
 
-            img{
+            img {
                 width: 18px;
                 height: 18px;
 
@@ -25,13 +29,13 @@
     }
 }
 
-.course{
+.course {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
-    .box{
+    .box {
         width: 200px;
         height: 200px;
     }
