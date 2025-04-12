@@ -44,7 +44,7 @@ const socialMedias = [
   },
   {
     id: 4,
-    link: "https://drive.google.com/file/d/1ESDUJN8IUNTSF0WgYRR-gPh5uU7dA-MV/view?usp=drive_link",
+    link: "https://drive.google.com/file/d/175b01X9IpzBy0Xu8dGzhbkcd-qntGuvt/view?usp=drive_link",
     icon: "CV",
     styles: {marginBottom:5}
   },
