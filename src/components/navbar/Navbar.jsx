@@ -7,20 +7,20 @@ import { FaMedium } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaNewspaper } from "react-icons/fa6";
 
-  // <a target="_blank" href="https://github.com/Gahramanoval301"><i
-  //                       class="fa-brands fa-github"></i></a>
-  //               <a target="_blank"
-  //                   href="https://www.linkedin.com/in/leman-gahramanova-0a3b6b2a5"><i
-  //                       class="fa-brands fa-linkedin-in"></i></a>
-  //               <a target="_blank"
-  //                   href="https://medium.com/@gahramanovalamann">
-  //                   <i class="fa-brands fa-medium"></i>
-  //               </a>
-  //               <a target="_blank"
-  //                   href="https://drive.google.com/file/d/14sHOEOxZlt89opVV2R1rKgx7YZBXzDh4/view?usp=sharing">
-  //                   <i class="fa-solid fa-newspaper">
+// <a target="_blank" href="https://github.com/Gahramanoval301"><i
+//                       class="fa-brands fa-github"></i></a>
+//               <a target="_blank"
+//                   href="https://www.linkedin.com/in/leman-gahramanova-0a3b6b2a5"><i
+//                       class="fa-brands fa-linkedin-in"></i></a>
+//               <a target="_blank"
+//                   href="https://medium.com/@gahramanovalamann">
+//                   <i class="fa-brands fa-medium"></i>
+//               </a>
+//               <a target="_blank"
+//                   href="https://drive.google.com/file/d/14sHOEOxZlt89opVV2R1rKgx7YZBXzDh4/view?usp=sharing">
+//                   <i class="fa-solid fa-newspaper">
 
-  //                   </i> </a>
+//                   </i> </a>
 const socialMedias = [
   {
     id: 0,
@@ -38,17 +38,23 @@ const socialMedias = [
     icon: <FaMedium />,
   },
   {
-    id: 0,
+    id: 3,
     link: "https://drive.google.com/file/d/14sHOEOxZlt89opVV2R1rKgx7YZBXzDh4/view?usp=sharing",
     icon: <FaNewspaper />,
   },
-  
+  {
+    id: 4,
+    link: "https://drive.google.com/file/d/14sHOEOxZlt89opVV2R1rKgx7YZBXzDh4/view?usp=sharing",
+    icon: "CV",
+    styles: {marginBottom:5}
+  },
+
 ]
 const Navbar = () => {
   return (
     <div className="navbar">
       {/* Sidebar */}
-      <Sidebar/>
+      <Sidebar />
       <div className="wrapper">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
@@ -60,7 +66,16 @@ const Navbar = () => {
         <div className="social">
           {
             socialMedias.map((socialMedia) => (
-              <a style={{fontSize:20}}  key={socialMedia.id} href={socialMedia.link} target="_blank" rel="noreferrer">
+              <a
+                key={socialMedia.id}
+                href={socialMedia.link}
+                style={{
+                  fontSize: 20,
+                  ...(socialMedia.styles || {})
+                }}
+                target="_blank"
+                rel="noreferrer"
+              >
                 {socialMedia.icon}
               </a>
             ))
