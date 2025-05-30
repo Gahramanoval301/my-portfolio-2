@@ -1,6 +1,6 @@
 .skills {
-    padding:2rem;
-    min-height: auto;
+    padding: 2rem;
+    min-height: 120vh;
 
     &-row {
         width: 100%;
@@ -11,7 +11,7 @@
         .skills-column {
             border: 1px solid var(--main-color--);
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.365);
-            padding: 1rem 2rem 3rem 0;
+            padding: 1rem 0rem;
             border-radius: 3rem;
             transition: 1s;
 
@@ -36,7 +36,7 @@
                     padding-left: 1rem;
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 1rem;
+                    gap: 0.7rem;
 
                     .progress {
                         display: flex;
@@ -60,6 +60,7 @@
                         i {
                             color: var(--main-color--);
                             transition: 0.5s;
+                            margin-top: 5px;
                         }
 
                         &.progressing {
@@ -71,17 +72,84 @@
                         }
                     }
                 }
-            }
-        }
-    }
 
-    @media screen and (max-width: 768px) {
-        &-row {
-            grid-template-columns: 1fr;
+            }
+
         }
     }
 }
 
+@media screen and (max-width:1250px) {
+    .skills {
+        &-row {
+            .skills-column .skills-box {
+
+                .skills-content {
+                    padding-left: 1rem;
+                    display: flex;
+                    gap: 1rem;
+
+                    .progress {
+                        gap: 0.5rem;
+                        font-size: 18px;
+                        padding: 0 0.5rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width:950px) {
+    .skills {
+        &-row {
+            grid-template-columns: repeat(1, minmax(250px, 1fr));
+        }
+
+        .skills-column .skills-box {
+
+            .skills-content {
+                gap: 0.5rem;
+
+                .progress {
+                    gap: 0.5rem;
+                    font-size: 16px;
+                }
+            }
+
+        }
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .skills {
+        padding: 1rem 0.5rem;
+        .skills-column .skills-box .skills-content {
+            gap: 0.5rem;
+
+            .progress {
+                gap: 0.2rem;
+                font-size: 13px;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:380px) {
+    .skills .skills-column .skills-box .skills-content {
+        gap: 0.4rem;
+
+        .progress {
+            font-size: 12px;
+        }
+    }
+
+}
+
+//animations 
 @keyframes rotate {
     to {
         transform: rotate(360deg);

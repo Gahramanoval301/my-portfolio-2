@@ -1,36 +1,41 @@
-.contact{
+.contact {
     height: 100%;
     max-width: 1366px;
+    padding-inline: 1rem;
+    padding-bottom: 1rem;
     margin: auto;
     display: flex;
     align-items: center;
     gap: 50px;
 
-    .textContainer{
+    .textContainer {
         flex: 1;
         display: flex;
         flex-direction: column;
         gap: 40px;
 
-        h1{
-            font-size:100px;
+        h1 {
+            font-size: 100px;
             line-height: 88px;
         }
 
-        span{
+        span {
             font-weight: 300;
         }
     }
-    .formContainer{
+
+    .formContainer {
+        width: 100%;
         flex: 1;
 
-        form{
+        form {
 
             display: flex;
             flex-direction: column;
             gap: 20px;
-            
-            input, textarea{
+
+            input,
+            textarea {
                 padding: 20px;
                 background-color: transparent;
                 border: 1px solid white;
@@ -38,7 +43,7 @@
                 border-radius: 5px;
             }
 
-            button{
+            button {
                 padding: 20px;
                 border: none;
                 background-color: orange;
@@ -47,4 +52,66 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 1000px) {
+    .contact .textContainer {
+        gap: 30px;
+
+        h1 {
+            font-size: 60px;
+            line-height: 48px;
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width: 650px) {
+    .contact {
+        padding-top: 2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        .textContainer {
+            gap: 10px;
+
+            h1 {
+                font-size: 48px;
+                line-height: 48px;
+            }
+
+        }
+
+        .formContainer {
+
+
+            form {
+
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input,
+                textarea {
+                    padding: 20px;
+                    background-color: transparent;
+                    border: 1px solid white;
+                    color: white;
+                    border-radius: 5px;
+                }
+
+                button {
+                    padding: 20px;
+                    border: none;
+                    background-color: orange;
+                    cursor: pointer;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
 }

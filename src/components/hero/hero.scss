@@ -6,6 +6,7 @@
 
     .wrapper {
         max-width: 1366px;
+        padding-inline: 2rem;
         height: 100%;
         margin: auto;
 
@@ -28,11 +29,10 @@
                 h1 {
                     position: relative;
                     width: 32.8rem;
-                    font-size: 3.2rem;
                     font-weight: 700;
                     color: transparent;
                     -webkit-text-stroke: 0.7px rebeccapurple;
-                background-image: linear-gradient(white, rebeccapurple);
+                    background-image: linear-gradient(white, rebeccapurple);
                     background-repeat: no-repeat;
                     -webkit-background-clip: text;
                     background-position: -33rem 0;
@@ -93,10 +93,142 @@
         position: absolute;
         bottom: -10%;
         right: 5%;
-        transform: scale(1.2);
     }
 }
 
+@media screen and (max-width:850px) {
+    .hero {
+        .wrapper {
+            .textContainer {
+                width: 100%;
+
+                h2 {
+                    font-size: 24px;
+                }
+
+                .text-animate {
+                    h1 {
+                        font-size: 75px;
+                    }
+                }
+
+                .buttons button {
+                    padding: 10px;
+                }
+            }
+        }
+
+        .slidingTextContainer {
+            font-size: 40vh;
+            bottom: -50px;
+        }
+
+        .imageContainer {
+            right: -6%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .hero {
+        .wrapper {
+            .textContainer {
+                width: 50%;
+
+                h2 {
+                    font-size: 20px;
+                }
+
+                .text-animate {
+                    h1 {
+                        font-size: 60px;
+                    }
+                }
+
+                .buttons {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px
+                }
+            }
+        }
+
+        .imageContainer {
+            bottom: -10%;
+            right: -12%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .hero {
+        .imageContainer {
+            height: 400px;
+            width: 400px;
+
+            right: -10%;
+            top: 15%;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .hero {
+        .wrapper {
+            .textContainer {
+
+                .text-animate {
+                    h1 {
+                        font-size: 58px;
+                    }
+                }
+
+            }
+        }
+
+        .imageContainer {
+            height: 320px;
+            width: 320px;
+
+            top: 25%;
+        }
+
+        .slidingTextContainer {
+            font-size: 20vh;
+            bottom: -20px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .hero {
+
+        .imageContainer {
+            display: none;
+        }
+
+        .buttons {
+            width: 50vw;
+        }
+
+        .slidingTextContainer {
+            font-size: 15vh;
+            bottom: -20px;
+        }
+    }
+
+}
+
+//animations 
 @keyframes homeBgText {
 
     0%,
@@ -110,6 +242,7 @@
         background-position: 0 0;
     }
 }
+
 @keyframes homeCursorText {
 
     0%,

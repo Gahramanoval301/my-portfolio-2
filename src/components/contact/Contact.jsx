@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import "./contact.scss"
-import { easeIn, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { sendMessage } from '../../api';
 
 const variants = {
@@ -45,9 +45,7 @@ const Contact = () => {
 
             setIsSubmitting(true);
             e.preventDefault();
-            console.log(data);
             const res = await sendMessage(data);
-            console.log(res);
             if (res.success) {
                 alert("Thank you for your message!")
                 setData({ title: "", email: "", message: "" })

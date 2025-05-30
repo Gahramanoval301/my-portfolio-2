@@ -1,45 +1,72 @@
-.parallax{
- width: 100%;
- height: 100%;
- position: relative;
- display: flex; 
- align-items: center;
- justify-content: center;
- overflow: hidden;
+.parallax {
+   width: 100%;
+   height: 100%;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
 
+   h1 {
+      font-size: 100px;
+   }
 
+   .mountains {
+      background-image: url("/mountains.png");
+      background-size: cover;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      // z-index: 3;
 
- h1{
-    font-size: 100px;
- }
- .mountains{
-    background-image: url("/mountains.png");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    // z-index: 3;
+   }
 
- }
- .planets{
-    background-image: url("/planets.png");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    // z-index: 2;
+   .planets {
+      background-image: url("/planets.png");
+      background-size: cover;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      // z-index: 2;
 
- }
- .stars{
-    background-image: url("/stars.png");
-    background-size: cover;
-    background-position: bottom;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    // z-index: 1;
+   }
 
- }
+   .stars {
+      background-image: url("/stars.png");
+      background-size: cover;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      // z-index: 1;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .parallax {
+
+      h1 {
+         font-size: 80px;
+      }
+   }
+}
+
+@media screen and (max-width: 450px) {
+   .parallax {
+
+      h1 {
+         font-size: 60px;
+      }
+   }
+}
+
+@media screen and (max-width: 350px) {
+   .parallax {
+
+      h1 {
+         font-size: 48px;
+      }
+   }
 }

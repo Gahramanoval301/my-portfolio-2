@@ -7,19 +7,19 @@ import Portfolio from "./components/portfolio/Portfolio";
 import Services from "./components/services/Services";
 
 const App = () => {
-  return <div>
+  return <div className="app-wrapper">
     <section id="Homepage">
       <Navbar />
       <Hero />
     </section>;
 
-    <section id="Portfolio"><Parallax type="portfolio" /></section>;
+    <section id="Portfolio"><Parallax type="portfolio" /></section>
     <Portfolio />
-    <section id="Services "><Parallax type="services" /></section>;
+    <section id="Services "><Parallax type="services" /></section>
     <Services/>
     <section id="Contact">
       <Contact />
-    </section>;
+    </section>
   </div>
 };
 

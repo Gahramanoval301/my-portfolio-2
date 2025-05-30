@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import "./portfolio.scss"
 import { motion, useScroll, useSpring, useTransform } from "framer-motion"
 const items = [
@@ -119,7 +119,7 @@ const Single = ({ item }) => {
         // offset: ["start start", "end start"]
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], [-220, 300]);
+   const y = useTransform(scrollYProgress, [0, 1],  [-220, 300]);
 
     return <section >
         <div className="container">

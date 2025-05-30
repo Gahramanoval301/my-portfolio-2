@@ -11,16 +11,17 @@
         justify-content: space-between;
         // background-color: rebeccapurple;
         height: 100%;
-     
+
         span {
             font-weight: bold;
         }
 
-        .social-media{
+        .social-media {
             display: flex;
             align-items: center;
             gap: 20px;
         }
+
         .social {
             display: flex;
             align-items: center;
@@ -44,5 +45,32 @@
     .box {
         width: 200px;
         height: 200px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .navbar {
+        .wrapper {
+            justify-content: space-between;
+            padding: 1rem 1rem 1rem 8rem;
+        }
+
+        .social {
+            flex-direction: column;
+            padding-top: 10rem;
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .navbar {
+        .wrapper {
+            padding: 1rem 1rem 1rem 5.5rem;
+            font-size: 14px;
+        }
+
+        .social {
+            flex-direction: column;
+            padding-top: 10rem;
+        }
     }
 }

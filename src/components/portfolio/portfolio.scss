@@ -10,7 +10,6 @@
         color: orange;
         font-size: 36px;
 
-        // h1 {}
 
         .progressBar {
             height: 10px;
@@ -31,17 +30,17 @@
             max-width: 1366px;
             height: 100%;
             margin: auto;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1.4fr 2fr;
             align-items: center;
-            justify-content: center;
+            justify-items: flex-start;
             gap: 50px;
+            padding-inline: 1rem;
 
             .imageContainer {
-                flex: 1;
-                height: 50%;
                 transition: all 0.5s ease-in-out;
                 overflow: hidden;
-                transform: scale(1.0);
+                transform: translateY(0);
                 border-radius: 12px;
 
                 img {
@@ -50,10 +49,9 @@
                     object-fit: contain;
                     object-position: center;
                     transition: all 0.5s ease-in-out;
-                    transform: scale(1.0);
 
                     &:hover {
-                        transform: scale(1.1);
+                        transform: translateY(6px);
                     }
                 }
 
@@ -61,10 +59,9 @@
             }
 
             .textContainer {
-                flex: 1;
                 display: flex;
                 flex-direction: column;
-                gap: 30px;
+                gap: 20px;
 
                 .buttons {
                     display: flex;
@@ -77,11 +74,12 @@
 
                 }
 
-                em{
+                em {
                     font-size: 16px;
                     color: rgb(151, 108, 28);
                     font-weight: 600;
                 }
+
                 p {
                     color: gray;
                     font-size: 20px;
@@ -115,4 +113,91 @@
             }
         }
     }
+}
+
+@media screen and (max-width:1300px) {
+    .portfolio .container .wrapper .textContainer {
+        gap: 10px;
+
+        h2 {
+            font-size: 48px;
+        }
+    }
+}
+
+
+@media screen and (max-width:900px) {
+    .portfolio .progress h1 {
+        font-size: 48px;
+    }
+
+    .portfolio .container .wrapper .textContainer {
+        gap: 5px;
+
+        h2 {
+            font-size: 28px;
+        }
+
+        em {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        div {
+            font-size: 90%;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            width: fit-content;
+            font-size: 16px;
+            letter-spacing: 0.1px;
+        }
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .portfolio .progress h1 {
+        font-size: 32px;
+    }
+
+    .portfolio .container .wrapper {
+        margin-top: 5rem;
+        grid-template-columns: 1fr;
+
+
+        .textContainer {
+            gap: 5px;
+
+            h2 {
+                font-size: 28px;
+            }
+
+            em {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            div {
+                font-size: 90%;
+            }
+
+            button {
+                margin-top: 10px;
+                padding: 10px 15px;
+                width: fit-content;
+                font-size: 16px;
+                letter-spacing: 0.1px;
+            }
+        }
+    }
+
 }
